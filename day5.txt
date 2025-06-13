@@ -1,0 +1,126 @@
+Exception Handling
+
+is an mechanism or a concept used to capsure run time errors
+
+types:
+	=>checked
+	  eg:file not found exception
+	  io exception
+	  class not found 
+	=>unchecked
+	  eg:null pointer exception
+	  arithmetic expection 
+	  index out of bounds
+	  legal argument exception
+	  errors
+	  system out of memory errors
+	  sudden shutdown
+	=>error
+
+try 
+
+catch
+finally
+these three are dependent
+throw ad throws are dependent
+throw=>inside the function body
+throws=> method header oe signature
+exception handling heiarchy
+
+object<=throwable<=error=>outofmemorybounds,stackflowovererrors.exception=>runtimeexception,ioexception 
+
+1.
+
+package ExceptionHandling;
+
+public class ThrowThrows {
+  void divide() throws ArithmeticException {
+	  throw new ArithmeticException("not eligible");
+	  
+  }
+  
+  public static void main(String[]args) throws AgeInvalid {
+	  var age = "10";
+	  if(age<18) {
+		  invalidAge();
+	  }
+	  else {
+		  System.out.println("allowed");
+	  }
+}
+}
+class AgeInvalid extends Exception{
+	  public AgeInvalid(String msg){
+		super(msg);  
+	  }
+}
+
+2.
+
+package ExceptionHandling;
+
+import java.util.Arrays;
+
+public class TryCatchClass {
+
+	public static void main(String[] args) {
+		int[] arr = new int [5];
+		System.out.println(Arrays.toString(arr));
+		try {
+		arr[2] =12;
+		int div = 10/0;
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println(e);
+		}catch(ArithmeticException e) {
+			System.out.println("infinite");
+		}finally {
+			System.out.println("try program completed");
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+}
+
+ COLLECTION:
+collections is an frame work which provides set of classes and interfaces to store
+ and manipulate groups of objects
+
+interfaces:
+COOLECTION HIERARCHY IN JAVA
+=>list===>arraylist,linkedlist,vector,<=stack
+
+=>set====>hashsset,linkedhashset
+||
+sorted<=treeset
+
+=>queue==>priority queue
+||
+deque<==arraydeque
+
+=>map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
